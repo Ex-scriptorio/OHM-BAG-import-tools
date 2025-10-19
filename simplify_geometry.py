@@ -13,7 +13,7 @@ def simplify_geometry(df):
     # since the tolerance is relative to the CRS of the data it might not work
     # as well in other applications.
 
-    df['geometry'] = df['geometry'].simplify(10**-6)
+    df['geometry'] = df['geometry'].simplify_coverage(10**-6)
 
 def write_dataframe_to_file(df, path):
 
