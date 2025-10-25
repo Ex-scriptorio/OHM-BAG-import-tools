@@ -51,7 +51,7 @@ def main():
             raise FileNotFoundError("No such file or directory: '{}'".format(arg))
 
         # Read the file in as a geopandas dataframe
-        df = gpd.read_file(arg)
+        df = gpd.read_file(arg, engine="fiona")
         
         # Simplify the datadrame
         simplify_geometry(df)
